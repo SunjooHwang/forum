@@ -3,7 +3,7 @@
 
     $sql = "CREATE TABLE member (";
     $sql .= "firstName varchar(15) NOT NULL,";
-    $sql .= "lastNAME varchar(20) NOT NULL,";
+    $sql .= "lastName varchar(20) NOT NULL,";
     $sql .= "memberID int(10) unsigned NOT NULL AUTO_INCREMENT,";
     $sql .= "email varchar(40) UNIQUE NOT NULL,";
     $sql .= "pw varchar(40) DEFAULT NULL,";
