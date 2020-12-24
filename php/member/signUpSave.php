@@ -52,7 +52,7 @@
        if ($result) {
            $_SESSION['memberID'] = $dbConnect->insert_id;
            $_SESSION['email'] = $email;
-           Header("Location:../../signUpSuccess.html");
+           Header("Location:./signUpSuccess.php");
        } else {
            showAlert("회원가입 실패");
            exit;

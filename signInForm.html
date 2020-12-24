@@ -5,24 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FORUM</title>
     <!-- css -->
-    <link rel="stylesheet" href="../../css/default.css" />
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/signUpSucessStyle.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/signUpSucessStyle.css" />
   </head>
   <body>
     <header>
       <nav class="nav-bar">
-        <a href="index.html" class="nav-bar__menu">main</a>
+        <a href="index.php" class="nav-bar__menu">main</a>
         <a href="#" class="nav-bar__menu">about</a>
         <a href="board_list.php" class="nav-bar__menu">forum</a>
-        <a href="#" class="nav-bar__menu">sign in</a>
+        <a href="signInForm.html" class="nav-bar__menu">sign in</a>
       </nav>
     </header>
     <main>
       <section class="signin-section">
-          <form name="signIn" id="signIn" action="signInProcessing.php" method="post">
-            
-          </form>
+        <form
+          name="signIn"
+          id="signIn"
+          action="php/member/signInProcessing.php"
+          method="POST"
+        >
+          <h1 class="signin__title">로그인</h1>
+          <input
+            type="email"
+            name="userEmail"
+            id="userEmail"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="userPw"
+            id="userPw"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="submit"
+            value="로그인"
+            name="signInSbmBtn"
+            id="signInSbmBtn"
+          />
+        </form>
       </section>
     </main>
     <footer>

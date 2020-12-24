@@ -12,10 +12,29 @@
   <body>
     <header>
       <nav class="nav-bar">
-        <a href="index.html" class="nav-bar__menu">main</a>
+        <a href="../../index.php" class="nav-bar__menu">main</a>
         <a href="#" class="nav-bar__menu">about</a>
-        <a href="board_list.php" class="nav-bar__menu">forum</a>
-        <a href="#" class="nav-bar__menu">sign in</a>
+        <a href="../../board_list.php" class="nav-bar__menu">forum</a>
+        <?php
+            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
+            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            if (!isset($_SESSION['memberID'])) {
+          ?>
+        <a href="signInForm.html" class="nav-bar__menu">sign in</a>
+        <div class="nav-bar__guest-message">
+          환영합니다, 손님. </div>
+        <?php
+            } else {
+        ?>
+        <a href="php/member/signOut.php">sign out</a>
+        <div class="nav-bar__member-message">환영합니다,
+          <?php
+              echo $_SESSION['memberID'];
+          ?>
+        님. </div>
+        <?php
+            }
+        ?>
       </nav>
     </header>
     <main>
