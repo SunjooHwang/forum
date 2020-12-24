@@ -1,0 +1,186 @@
+$prmry1: #f2e9bd;
+$prmry2: #f2d544;
+$prmry3: #f2cd5c;
+$scndry1: #d9d9d9;
+$scndry2: #6c6f73;
+$scndry3: #212326;
+$brown: #594302;
+
+@mixin testborder1 {
+  border: 1px solid red;
+}
+@mixin testborder2 {
+  border: 1px solid blue;
+}
+
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  // media
+  html {
+    font-size: 10px;
+  }
+  body {
+    background-color: $prmry1;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    @include testborder1();
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: $scndry1;
+  }
+  .nav-bar {
+    @include testborder2();
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: $scndry1;
+    display: flex;
+    flex-direction: column;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-bar__menu-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 50vh;
+    @include testborder1();
+  }
+}
+
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  // media
+  html {
+    font-size: 10px;
+  }
+  body {
+    background-color: $prmry1;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    @include testborder1();
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: $scndry1;
+  }
+  .nav-bar {
+    @include testborder2();
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: $scndry1;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-bar__menu-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include testborder1();
+  }
+}
+
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  // media
+  html {
+    font-size: 15px;
+  }
+  body {
+    background-color: $prmry1;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    @include testborder1();
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: $scndry1;
+  }
+  .nav-bar {
+    @include testborder2();
+    height: 2rem;
+    width: 100%;
+    position: unset;
+    background-color: $scndry1;
+  }
+  .nav-bar__menu-wrap {
+    flex-direction: row;
+  }
+}
+
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  // media
+  html {
+    font-size: 15px;
+  }
+  body {
+    background-color: $prmry1;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    @include testborder1();
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: $scndry1;
+  }
+  .nav-bar {
+    @include testborder2();
+    height: 2rem;
+    width: 100%;
+    position: unset;
+    background-color: $scndry1;
+  }
+  .nav-bar__menu-wrap {
+    flex-direction: row;
+  }
+}

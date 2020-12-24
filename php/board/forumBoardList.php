@@ -31,7 +31,7 @@
         <a href="../member/signOut.php">sign out</a>
         <div class="nav-bar__member-message">환영합니다,
           <?php
-              echo $_SESSION['memberID'];
+              echo $_SESSION['userName'];
           ?>
         님. </div>
         <?php
@@ -40,16 +40,59 @@
       </nav>
     </header>
     <main>
-      <section class="writePost-section">
-        <form name="writePost" id="writePost" method="POST" action="savePost.php">
-          <div class="writePost-form__title-wrap">
-          <label for="title">제목</label>  
-          <input type="text" name="title" id="title" required/>
-          </div>
-          <textarea name="content" id="content" cols="80" rows="10" placeholder="여기에 내용을 입력하세요." required>
-          </textarea>
-          <input type="submit" value="작성" id="postSbmBtn"/>
-        </form>
+      <section class="forum-board-section">
+        <table class="forum-board-list">
+            <thead class="forum-board-list__header-row">
+                <th class="board-list__header-item">No.</th>
+                <th class="board-list__header-item">제목</th>
+                <th class="board-list__header-item">작성자</th>
+                <th class="board-list__header-item">작성일</th>
+            </thead>
+            <tbody class="forum-board-list__posts-section">
+                <?php
+                    if (isset($_GET['page'])) {
+                        $page = (int) $_GET['page'];
+                    } else {
+                        $page = 1;
+                    }
+
+                    $numView = 20;
+
+                    $firstLimitValue = ($numView * $page) - $numView;
+
+                    $sql = "SELECT b.boardID b.title m.userName b.regTime FROM forumboard b ";
+                    $sql .= "JOIN member m ON (b.memberID = m.memberID) ORDER BY boardID ";
+                    $sql .= "DESC LIMIT {$firstLimitValue}, {$numView}";
+
+                    $result = $dbConnect->query($sql);
+
+                    if ($result) {
+                        $dataCount = $result->num_rows;
+
+                        if ($dataCount > 0) {
+                            for ($i = 0; $i < $dataCount; $i++) {
+                                $memberInfo = $result->fetch_array(MYSQLI_ASSOC);
+                                echo "<tr>";
+                                echo "<td>".$memberInfo['boardID']."<td>";
+                                echo "<td><a href='/forum/php/board/forumView.php?boardID=";
+                                echo "{$memberInfo['boardID']}'>";
+                                echo $memberInfo['title'];
+                                echo "</a></td>";
+                                echo "<td>{$memberInfo['userName']}</td>";
+                                echo "<td>".date('Y-m-d H:i', $memberInfo['regTime'])."</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td>게시글이 없습니다.</td></tr>";
+                        }
+                    }
+                ?>
+            </tbody>
+        </table>
+        <?php
+            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardPagination.php';
+            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardsearchForm.php';
+        ?>
       </section>
     </main>
     <footer>

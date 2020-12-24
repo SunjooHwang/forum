@@ -1,1 +1,185 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+@media (min-width: 576px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    background-color: #f2e9bd;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    border: 1px solid red;
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: #d9d9d9;
+  }
+  .nav-bar {
+    border: 1px solid blue;
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #d9d9d9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-bar__menu-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    height: 50vh;
+    border: 1px solid red;
+  }
+}
+
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  body {
+    background-color: #f2e9bd;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    border: 1px solid red;
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: #d9d9d9;
+  }
+  .nav-bar {
+    border: 1px solid blue;
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #d9d9d9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav-bar__menu-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    border: 1px solid red;
+  }
+}
+
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+@media (min-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+  body {
+    background-color: #f2e9bd;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    border: 1px solid red;
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: #d9d9d9;
+  }
+  .nav-bar {
+    border: 1px solid blue;
+    height: 2rem;
+    width: 100%;
+    position: unset;
+    background-color: #d9d9d9;
+  }
+  .nav-bar__menu-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/* ////////////////////////////////////////////
+//////////////////////////////////////////////
+/////////////////////////////////////////////
+//////////////////////////////////////////*/
+@media (min-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+  body {
+    background-color: #f2e9bd;
+  }
+  header {
+    width: 100%;
+    height: 5rem;
+    border: 1px solid red;
+  }
+  .page_title {
+    width: 100%;
+    height: 5rem;
+    font-size: 4rem;
+    text-align: center;
+    background-color: #d9d9d9;
+  }
+  .nav-bar {
+    border: 1px solid blue;
+    height: 2rem;
+    width: 100%;
+    position: unset;
+    background-color: #d9d9d9;
+  }
+  .nav-bar__menu-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=index.css.map */

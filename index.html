@@ -10,27 +10,31 @@
   </head>
   <body>
     <header>
+      <div class="page_title"><a href="index.html">forum</a></div>
       <nav class="nav-bar">
-        <a href="index.php" class="nav-bar__menu">main</a>
-        <a href="#" class="nav-bar__menu">about</a>
-        <a href="board_list.php" class="nav-bar__menu">forum</a>
-          <?php
+        <div class="nav-bar__menu-wrap">
+          <a href="index.php" class="nav-bar__menu-item">main</a>
+          <a href="#" class="nav-bar__menu-item">about</a>
+          <a href="board_list.php" class="nav-bar__menu-item">forum</a>
+        </div>
+        <?php
             include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
             include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
             if (!isset($_SESSION['memberID'])) {
           ?>
         <a href="signInForm.html" class="nav-bar__menu">sign in</a>
-        <div class="nav-bar__guest-message">
-          환영합니다, 손님. </div>
+        <div class="nav-bar__guest-message">환영합니다, 손님.</div>
         <?php
             } else {
         ?>
         <a href="php/member/signOut.php">sign out</a>
-        <div class="nav-bar__member-message">환영합니다,
+        <div class="nav-bar__member-message">
+          환영합니다,
           <?php
-              echo $_SESSION['memberID'];
+              echo $_SESSION['userName'];
           ?>
-        님. </div>
+          님.
+        </div>
         <?php
             }
         ?>

@@ -31,7 +31,7 @@
         <a href="../member/signOut.php">sign out</a>
         <div class="nav-bar__member-message">환영합니다,
           <?php
-              echo $_SESSION['memberID'];
+              echo $_SESSION['userName'];
           ?>
         님. </div>
         <?php
@@ -40,6 +40,17 @@
       </nav>
     </header>
     <main>
+      <?php
+          if(!isset($_SESSION['memberID'])) {
+      ?>
+        <section class="signin-needed-section">
+          <h1 class="signin-needed__message">
+            로그인이 필요한 메뉴입니다.
+          </h1>
+        </section>
+      <?php
+        } else {
+      ?>
       <section class="writePost-section">
         <form name="writePost" id="writePost" method="POST" action="savePost.php">
           <div class="writePost-form__title-wrap">
@@ -51,6 +62,9 @@
           <input type="submit" value="작성" id="postSbmBtn"/>
         </form>
       </section>
+      <?php
+        }
+      ?>
     </main>
     <footer>
       <ul class="footer__link-wrap">

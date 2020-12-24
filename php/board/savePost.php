@@ -1,7 +1,7 @@
 <?php
-    include $_SERVER['DOUMENT_ROOT'].'/forum/php/session.php';
-    include $_SERVER['DOUMENT_ROOT'].'/forum/php/checkSignSession.php';
-    include $_SERVER['DOUMENT_ROOT'].'/forum/php/connection.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
 
     $title = $_POST['title'];
     $content = $_POST['content'];
@@ -11,7 +11,7 @@
 
     $sql = "INSERT INTO forumboard (memberID, title, content, regTime)";
     $sql .= "VALUES ('{$memberID}', '{$title}', '{$content}', {$regTime})";
-    $result = $dbConenct->query($sql);
+    $result = $dbConnect->query($sql);
 
     if ($result) {
         Header("Location:./forumBoardList.php");

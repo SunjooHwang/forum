@@ -5,6 +5,7 @@
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['userEmail'];
+    $userName = $_POST['userName'];
     $pw = $_POST['userPw'];
     $pwChk = $_POST['userPwChk'];
 
@@ -44,8 +45,8 @@
    if ($isEmailCheck == true && $isPwCheck == true) {
        $regTime = time();
        
-       $sql = "INSERT INTO member (firstName, lastName, email, pw, regTime)";
-       $sql .= "VALUES ('{$firstName}','{$lastName}','{$email}','{$pw}',{$regTime})";
+       $sql = "INSERT INTO member (firstName, lastName, email, username, pw, regTime)";
+       $sql .= "VALUES ('{$firstName}','{$lastName}','{$email}','{$userName}','{$pw}',{$regTime})";
        
        $result = $dbConnect->query($sql);
 

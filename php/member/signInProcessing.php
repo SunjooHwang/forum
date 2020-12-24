@@ -5,7 +5,7 @@
     $email = $_POST['userEmail'];
     $pw = $_POST['userPw'];
 
-    $sql = "SELECT memberID, email FROM member ";
+    $sql = "SELECT memberID, email, userName FROM member ";
     $sql .= "WHERE email = '{$email}' AND pw = '{$pw}'";
     $result = $dbConnect->query($sql);
 
@@ -20,7 +20,7 @@
         } else {
             $memberInfo = $result->fetch_array(MYSQLI_ASSOC);
             $_SESSION['memberID'] = $memberInfo['memberID'];
-            $_SESSION['email'] = $memberInfo['email'];
+            $_SESSION['userName'] = $memberInfo['userName'];
             Header("Location: ../../index.php");
         }
     } else {
