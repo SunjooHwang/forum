@@ -20,13 +20,50 @@
   }
   .nav-bar__ham-btn-mb {
     display: block;
+    position: fixed;
+    bottom: 3rem;
+    left: 2rem;
+    padding: 1rem;
+    background-color: #f2e9bd;
+    z-index: 300;
+  }
+  .nav-bar__ham-btn-mb #hamBtn {
+    font-size: 4rem;
+    color: #212326;
   }
   .nav-bar__menu-wrap-mb {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    left: -70vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0;
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #f2e9bd;
+    z-index: 400;
+  }
+  .nav-bar__menu-wrap-mb .nav-bar__menu-item {
+    font-size: 6rem;
+    color: #212326;
+    padding-left: 2rem;
+  }
+  .nav-bar__menu-wrap-mb .nav-bar__close-btn-mb {
+    text-align: right;
+    padding-top: 3rem;
+    padding-right: 3rem;
+  }
+  .nav-bar__menu-wrap-mb .nav-bar__close-btn-mb #closeBtn {
+    font-size: 4rem;
   }
   .nav-bar__menu-wrap-dt {
+    display: none;
+  }
+  .nav-bar .guest-message {
     display: none;
   }
   .nav-bar .member-message {
@@ -227,6 +264,11 @@
   .nav-bar__message a {
     color: #f8f8ff;
   }
+  .nav-bar .guest-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .nav-bar .member-message {
     display: none;
   }
@@ -236,6 +278,8 @@
   .index__top {
     width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -426,6 +470,11 @@
   .nav-bar__message a {
     color: #f8f8ff;
   }
+  .nav-bar .guest-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .nav-bar .member-message {
     display: none;
   }
@@ -592,7 +641,7 @@
             align-items: center;
     text-transform: uppercase;
     position: fixed;
-    z-index: 100;
+    z-index: 250;
   }
   .nav-bar__ham-btn-mb {
     display: none;
@@ -625,11 +674,18 @@
   .nav-bar__message a {
     color: #f8f8ff;
   }
+  .nav-bar .guest-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .nav-bar .member-message {
     display: none;
   }
   main {
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
   .index__top {
     width: 100%;
@@ -740,14 +796,91 @@
     display: -ms-flexbox;
     display: flex;
     width: calc(100% * 4);
-    margin: 0;
-    padding: 0;
   }
   .index__top__right-slider-item {
-    margin: 0;
-    padding: 0;
     width: calc(100% / 4);
     position: relative;
+  }
+  footer {
+    width: 100%;
+    height: 20rem;
+    background-color: #f2e9bd;
+    position: relative;
+    z-index: 250;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    color: #f2cd5c;
+    margin-bottom: 1rem;
+  }
+  footer a {
+    color: #212326;
+    font-size: 1.5rem;
+  }
+  footer .footer__link-wrap {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 15%;
+  }
+  footer .footer__sns-wrap {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 15%;
+  }
+  footer .footer__search-wrap {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+  }
+  footer .footer__search-wrap label {
+    font-size: 3rem;
+    font-weight: normal;
+    color: #f2cd5c;
+  }
+  footer .footer__search-wrap .footer__search-form__input-wrap {
+    margin-top: 1rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .footer__search-wrap .footer__search-form__input-wrap #footer__search-text {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+  footer .footer__search-wrap .footer__search-form__input-wrap #footerSrchSbmBtn {
+    width: 20%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 1px solid #212326;
+    color: #212326;
   }
 }
 /*# sourceMappingURL=index.css.map */
