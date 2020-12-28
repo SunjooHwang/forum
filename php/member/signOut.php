@@ -3,6 +3,6 @@
     unset($_SESSION['memberID']);
     unset($_SESSION['email']);
     unset($_SESSION['userName']);
-    Header("Location: ../../index.php");
+    Header($_SERVER['DOCUMENT_ROOT'].'/forum/index.php');
     // exit;
 ?>

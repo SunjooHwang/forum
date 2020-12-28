@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+$prmry1: #f2e9bd;
+$prmry2: #f2d544;
+$prmry3: #f2cd5c;
+$scndry1: #d9d9d9;
+$scndry2: #6c6f73;
+$scndry3: #212326;
+$brown: #594302;
+$offwhite: #f8f8ff;
+$blue: #020a96;
+
+$img1col1: #99b4bf;
+$img1col2: #1f788c;
+
+@mixin prmryGrdnt {
+  background: rgb(108, 111, 115);
+  background: linear-gradient(
+    318deg,
+    rgba(108, 111, 115, 1) 0%,
+    rgba(242, 213, 68, 1) 100%
+  );
+}
+
+@mixin img1grdnt {
+  background: rgb(187, 197, 204);
+  background: linear-gradient(
+    90deg,
+    rgba(187, 197, 204, 1) 0%,
+    rgba(219, 215, 214, 1) 50%,
+    rgba(61, 54, 39, 1) 100%
+  );
+}
+
+$img2col1: #f2dfce;
+$img2col2: #f2a007;
+
+@mixin img2grdnt {
+  background: rgb(227, 210, 194);
+  background: linear-gradient(
+    90deg,
+    rgba(227, 210, 194, 1) 0%,
+    rgba(242, 160, 7, 1) 50%,
+    rgba(0, 11, 2, 1) 100%
+  );
+}
+
+$img3col1: #d9b596;
+$img3col2: #0367a6;
+
+@mixin img3grdnt {
+  background: rgb(227, 196, 161);
+  background: linear-gradient(
+    90deg,
+    rgba(227, 196, 161, 1) 0%,
+    rgba(161, 166, 159, 1) 50%,
+    rgba(29, 129, 184, 1) 100%
+  );
+}
+
+$img4col1: #dbd6d2;
+$img4col2: #261014;
+
+@mixin img4grdnt {
+  background: rgb(213, 207, 207);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 207, 207, 1) 0%,
+    rgba(114, 75, 30, 1) 50%,
+    rgba(59, 53, 39, 1) 100%
+  );
+}
+
+@mixin testborder1 {
+  border: 1px solid red;
+}
+@mixin testborder2 {
+  border: 1px solid blue;
+}
+
+@mixin frostedGlass {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+@mixin frostedGlassGray {
+  background-color: rgba(150, 150, 150, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+// Small devices (landscape phones, 576px and up)
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 576px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .search-result {
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__table {
+      width: 90%;
+      //   min-width: 110rem;
+      height: 60%;
+
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: start;
+      //   align-items: center;
+
+      font-size: 1.5rem;
+
+      border: 1px solid $scndry1;
+
+      &__header {
+        width: 100%;
+        height: 10%;
+        // background-color: black;
+        @include frostedGlass();
+      }
+
+      &__posts-section {
+        @include testborder2();
+        width: 100%;
+        height: 90%;
+        // background-color: black;
+        tr {
+          td {
+            @include frostedGlass();
+
+            a {
+              color: $blue;
+              &:hover {
+                color: $prmry3;
+                transition: 0.2s ease-in-out;
+                text-shadow: 1px 1px $scndry3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .search-result {
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__table {
+      width: 100%;
+      //   min-width: 110rem;
+      height: 60%;
+
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: start;
+      //   align-items: center;
+
+      font-size: 1.5rem;
+
+      border: 1px solid $scndry1;
+
+      &__header {
+        width: 100%;
+        height: 10%;
+        // background-color: black;
+        @include frostedGlass();
+      }
+
+      &__posts-section {
+        @include testborder2();
+        width: 100%;
+        height: 90%;
+        // background-color: black;
+        tr {
+          td {
+            @include frostedGlass();
+
+            a {
+              color: $blue;
+              &:hover {
+                color: $prmry3;
+                transition: 0.2s ease-in-out;
+                text-shadow: 1px 1px $scndry3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 992px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .search-result {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__table {
+      width: 100%;
+      //   min-width: 110rem;
+      height: 60%;
+
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: start;
+      //   align-items: center;
+
+      font-size: 1.5rem;
+
+      border: 1px solid $scndry1;
+
+      &__header {
+        width: 100%;
+        height: 10%;
+        // background-color: black;
+        @include frostedGlass();
+      }
+
+      &__posts-section {
+        @include testborder2();
+        width: 100%;
+        height: 90%;
+        // background-color: black;
+        tr {
+          td {
+            @include frostedGlass();
+
+            a {
+              color: $blue;
+              &:hover {
+                color: $prmry3;
+                transition: 0.2s ease-in-out;
+                text-shadow: 1px 1px $scndry3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 1200px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .search-result__message {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+
+    @include frostedGlass();
+  }
+
+  .search-result {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__table {
+      width: 80%;
+      min-width: 110rem;
+      height: 60%;
+
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: start;
+      //   align-items: center;
+
+      font-size: 1.5rem;
+
+      border: 1px solid $scndry1;
+
+      &__header {
+        width: 100%;
+        height: 10%;
+        // background-color: black;
+        @include frostedGlass();
+      }
+
+      &__posts-section {
+        @include testborder2();
+        width: 100%;
+        height: 90%;
+        // background-color: black;
+        tr {
+          td {
+            @include frostedGlass();
+
+            a {
+              color: $blue;
+              &:hover {
+                color: $prmry3;
+                transition: 0.2s ease-in-out;
+                text-shadow: 1px 1px $scndry3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

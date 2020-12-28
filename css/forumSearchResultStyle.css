@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+html {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 576px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .search-result {
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .search-result__table {
+    width: 90%;
+    height: 60%;
+    font-size: 1.5rem;
+    border: 1px solid #d9d9d9;
+  }
+  .search-result__table__header {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section {
+    border: 1px solid blue;
+    width: 100%;
+    height: 90%;
+  }
+  .search-result__table__posts-section tr td {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section tr td a {
+    color: #020a96;
+  }
+  .search-result__table__posts-section tr td a:hover {
+    color: #f2cd5c;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-shadow: 1px 1px #212326;
+  }
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .search-result {
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .search-result__table {
+    width: 100%;
+    height: 60%;
+    font-size: 1.5rem;
+    border: 1px solid #d9d9d9;
+  }
+  .search-result__table__header {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section {
+    border: 1px solid blue;
+    width: 100%;
+    height: 90%;
+  }
+  .search-result__table__posts-section tr td {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section tr td a {
+    color: #020a96;
+  }
+  .search-result__table__posts-section tr td a:hover {
+    color: #f2cd5c;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-shadow: 1px 1px #212326;
+  }
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 992px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .search-result {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .search-result__table {
+    width: 100%;
+    height: 60%;
+    font-size: 1.5rem;
+    border: 1px solid #d9d9d9;
+  }
+  .search-result__table__header {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section {
+    border: 1px solid blue;
+    width: 100%;
+    height: 90%;
+  }
+  .search-result__table__posts-section tr td {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section tr td a {
+    color: #020a96;
+  }
+  .search-result__table__posts-section tr td a:hover {
+    color: #f2cd5c;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-shadow: 1px 1px #212326;
+  }
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 1200px) {
+  body {
+    width: 100%;
+    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .search-result__message {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .search-result__table {
+    width: 80%;
+    min-width: 110rem;
+    height: 60%;
+    font-size: 1.5rem;
+    border: 1px solid #d9d9d9;
+  }
+  .search-result__table__header {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section {
+    border: 1px solid blue;
+    width: 100%;
+    height: 90%;
+  }
+  .search-result__table__posts-section tr td {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .search-result__table__posts-section tr td a {
+    color: #020a96;
+  }
+  .search-result__table__posts-section tr td a:hover {
+    color: #f2cd5c;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-shadow: 1px 1px #212326;
+  }
+}
+/*# sourceMappingURL=forumSearchResultStyle.css.map */

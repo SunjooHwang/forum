@@ -1,3 +1,7 @@
+<?php
+    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,12 +11,17 @@
     <!-- css -->
     <link rel="stylesheet" href="../../css/default.css" />
     <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/signUpSuccessStyle.css" />
+    <link rel="stylesheet" href="../../css/forumViewStyle.css" />
+        <!-- font awesome -->
+        <script
+      src="https://kit.fontawesome.com/1165ec50ee.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <nav class="nav-bar">
-      <div class="nav-bar__menu-wrap-dt">
+    <nav class="nav-bar">
+        <div class="nav-bar__menu-wrap-dt">
           <a href="../../index.php" class="nav-bar__menu-item">main</a>
           <a href="#" class="nav-bar__menu-item">about</a>
           <a href="forumBoardList.php" class="nav-bar__menu-item">forum</a>
@@ -45,7 +54,7 @@
         ?>
         <ul class="nav-bar__message member-message">
           <li class="nav-bar__message-item">
-            <a href="member/signOut.php">sign out</a>
+            <a href="../member/signOut.php">sign out</a>
           </li>
           <li class="nav-bar__message-item">
             환영합니다,
@@ -62,11 +71,43 @@
       </nav>
     </header>
     <main>
-      <section class="signup-success__main">
-        <h1 class="signup-success__message">회원가입에 성공하였습니다.</h1>
+        <section class="forum-view">
         <div class="link-to-list">
-          <a href="../board/forumBoardList.php">Forum으로 가기</a>
+          <a href="forumBoardList.php">목록으로</a>
         </div>
+      <?php
+        
+        if (isset($_GET['boardID']) && (int) $_GET['boardID'] > 0) {
+            $boardID = $_GET['boardID'];
+            $sql = "SELECT b.title, b.content, m.userName, b.regTime FROM forumboard b ";
+            $sql .= "JOIN member m ON (b.memberID = m.memberID) ";
+            $sql .= "WHERE b.boardID = {$boardID}";
+            
+            $result = $dbConnect ->query($sql);
+
+            if ($result) {
+                $contentInfo = $result -> fetch_array(MYSQLI_ASSOC);
+                echo "<article class='forum-view__article'><ul class='forum-view__article__info'>";
+                echo "<ul class='forum-view__article__info-title'>";
+                echo "<li>제목</li><li>".$contentInfo['title']."</li></ul>";
+                echo "<ul class='forum-view__article__info-author'>";
+                echo "<li>작성자 </li><li>".$contentInfo['userName']."</li></ul>";
+                
+                $regDate = date("Y-m-d h:i");
+                echo "<ul class='forum-view__article__info-date'>";
+                echo "<li>게시일</li><li>".$regDate."</li></ul></ul>";
+                echo "<div class='forum-view__article__content'>".$contentInfo['content']."</div>";
+                echo "</article>";
+
+            } else {
+                echo "잘못된 접근입니다.";
+                exit;
+            } 
+        } else {
+            echo "잘못된 접근입니다.";
+            exit;
+        }
+      ?>
       </section>
     </main>
     <footer>

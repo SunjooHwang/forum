@@ -1,1 +1,602 @@
-/* No CSS *//*# sourceMappingURL=signUpStyle.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+html {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 576px) {
+  body {
+    width: 100%;
+    background-image: url(../img/laura-adai-oPxm1Gr1veQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .signup-section {
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp {
+    width: 70rem;
+    height: 70%;
+    min-height: 40rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border: 1px solid #f8f8ff;
+    border-radius: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp .signup__title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+  }
+  .signup-section #signUp .signup-form__name-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .signup-section #signUp .signup-form__name-wrap #firstName {
+    width: 40%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp .signup-form__name-wrap #lastName {
+    width: 40%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userEmail {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userName {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPw {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPwChk {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn {
+    width: 30%;
+    height: 4rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #6c6f73;
+    color: #6c6f73;
+    background-color: transparent;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn:hover {
+    background-color: #6c6f73;
+    color: #f8f8ff;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    background-image: url(../img/laura-adai-oPxm1Gr1veQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .signup-section {
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp {
+    width: 70rem;
+    height: 70%;
+    min-height: 40rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border: 1px solid #f8f8ff;
+    border-radius: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp .signup__title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+  }
+  .signup-section #signUp .signup-form__name-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .signup-section #signUp .signup-form__name-wrap #firstName {
+    width: 45%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp .signup-form__name-wrap #lastName {
+    width: 45%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userEmail {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userName {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPw {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPwChk {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn {
+    width: 30%;
+    height: 4rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #6c6f73;
+    color: #6c6f73;
+    background-color: transparent;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn:hover {
+    background-color: #6c6f73;
+    color: #f8f8ff;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 992px) {
+  body {
+    width: 100%;
+    background-image: url(../img/laura-adai-oPxm1Gr1veQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .signup-section {
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp {
+    width: 70rem;
+    height: 70%;
+    min-height: 40rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border: 1px solid #f8f8ff;
+    border-radius: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp .signup__title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+  }
+  .signup-section #signUp .signup-form__name-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .signup-section #signUp .signup-form__name-wrap #firstName {
+    width: 45%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp .signup-form__name-wrap #lastName {
+    width: 45%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userEmail {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userName {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPw {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPwChk {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn {
+    width: 30%;
+    height: 4rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #6c6f73;
+    color: #6c6f73;
+    background-color: transparent;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn:hover {
+    background-color: #6c6f73;
+    color: #f8f8ff;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+/*
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+*/
+@media (min-width: 1200px) {
+  body {
+    width: 100%;
+    background-image: url(../img/laura-adai-oPxm1Gr1veQ-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .signup-section {
+    height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp {
+    width: 70rem;
+    height: 70%;
+    min-height: 40rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border: 1px solid #f8f8ff;
+    border-radius: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .signup-section #signUp .signup__title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+  }
+  .signup-section #signUp .signup-form__name-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .signup-section #signUp .signup-form__name-wrap #firstName {
+    width: 45%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp .signup-form__name-wrap #lastName {
+    width: 45%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userEmail {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userName {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPw {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #userPwChk {
+    width: 70%;
+    height: 3rem;
+    font-size: 2rem;
+    text-indent: 2rem;
+    background-color: #f2cd5c;
+    color: #f8f8ff;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn {
+    width: 30%;
+    height: 4rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #6c6f73;
+    color: #6c6f73;
+    background-color: transparent;
+    margin-bottom: 3rem;
+  }
+  .signup-section #signUp #signUpSbmBtn:hover {
+    background-color: #6c6f73;
+    color: #f8f8ff;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=signUpStyle.css.map */

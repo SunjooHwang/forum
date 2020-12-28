@@ -10,7 +10,7 @@
     // 처음 page로 이동
     echo "<ul class='forum-board__pagination'>";
     echo "<li class='forum-board__pagination__first'>";
-    echo "<a href='./forumBoardList.php?page=1'>처음</a></li>";
+    echo "<a href='./forumBoardList.php?page=1'>〈처음</a></li>";
 
     // 이전 page로 이동
     if($page != 1) {
@@ -44,7 +44,7 @@
     }
 
     echo "<li class='forum-board__pagination__last'>";
-    echo "<a href='./forumBoardList.php?page={$totalPage}'>끝</a></li>";
+    echo "<a href='./forumBoardList.php?page={$totalPage}'>끝〉</a></li>";
     
 
 ?>

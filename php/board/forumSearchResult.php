@@ -1,3 +1,12 @@
+<?php
+    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
+    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
+
+    $searchKeyword = $dbConnect->real_escape_string($_POST['footer__search-text']);
+    $searchOption = $dbConnect->real_escape_string($_POST['searchOption']);
+
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +16,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../../css/default.css" />
     <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/signUpSuccessStyle.css" />
+    <link rel="stylesheet" href="../../css/forumSearchResultStyle.css" />
   </head>
   <body>
     <header>
@@ -45,7 +54,7 @@
         ?>
         <ul class="nav-bar__message member-message">
           <li class="nav-bar__message-item">
-            <a href="member/signOut.php">sign out</a>
+            <a href="../member/signOut.php">sign out</a>
           </li>
           <li class="nav-bar__message-item">
             환영합니다,
@@ -62,11 +71,90 @@
       </nav>
     </header>
     <main>
-      <section class="signup-success__main">
-        <h1 class="signup-success__message">회원가입에 성공하였습니다.</h1>
-        <div class="link-to-list">
-          <a href="../board/forumBoardList.php">Forum으로 가기</a>
-        </div>
+    <?php
+
+        function showAlert($alert) {
+            echo '<script type=text/javascript> alert("'.$alert.'")</script>';
+        }
+
+        if ($searchKeyword == '' || $searchKeyword == null) {
+            showAlert("검색어를 입력해 주세요.");
+            // Header("Location:../../index.php");
+            exit;
+        }
+
+        switch ($searchOption) {
+            case 'title':
+                case 'content':
+                case 'tAndC':
+                case 'tOrC':
+                    break;
+                default :
+                    showAlert("검색 옵션을 선택하세요.");
+                    // Header("Location:../../index.php");
+                    exit;
+                    break;
+        }
+
+        $sql = "SELECT b.boardID, b.title, m.userName, b.regTime FROM forumboard b ";
+        $sql .= "JOIN member m ON (b.memberID = m.memberID)";
+
+        switch ($searchOption) {
+            case 'title':
+                $sql .= "WHERE b.title LIKE '%{$searchKeyword}%'";
+                break;
+            case 'content':
+                $sql .= "WHERE b.content LIKE '%{$searchKeyword}'";
+                break;
+            case 'tAndC':
+                $sql .= "WHERE b.title LIKE '%{$searchKeyword}%'";
+                $sql .= " AND ";
+                $sql .= "b.content LIKE '%{$searchKeyword}'";
+                break;
+            case 'tOrC':
+                $sql .= "WHERE b.title LIKE '%{$searchKeyword}%'";
+                $sql .= " OR ";
+                $sql .= "b.content LIKE '%{$searchKeyword}'";
+                break;
+            }
+
+        $result = $dbConnect -> query($sql);
+
+        if ($result) {
+            $dataCount = $result ->num_rows;
+        } else {
+            echo "ERROR!!!!";
+            exit;
+        }
+    ?>
+      <section class="search-result">
+        <table class="search-result__table">
+        <thead class="search-result__table__header">
+                <th class="search-result__table__header-item">No.</th>
+                <th class="search-result__table__header-item">제목</th>
+                <th class="search-result__table__header-item">작성자</th>
+                <th class="search-result__table__header-item">작성일</th>
+            </thead>
+            <tbody class="search-result__table__posts-section">
+                <?php
+                    if ($dataCount > 0) {
+                        for ($i = 0; $i < $dataCount; $i ++) {
+                            $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
+
+                            echo "<tr>";
+                            echo "<td>".$memberInfo['boardID']."</td>";
+                            echo "<td class='col_title'><a href='./185-view.php?boardID={$memberInfo['boardID']}'>";
+                            echo "{$memberInfo['title']}</a></td>";
+                            echo "<td>".$memberInfo['userName']."</td>";
+                            echo "<td>".date('Y-m-d H:1', $memberInfo['regTime'])."</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td>{$searchKeyword}를 포함하는 게시글이 없습니다. </td></tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
       </section>
     </main>
     <footer>
