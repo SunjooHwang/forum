@@ -34,8 +34,9 @@
           <a href="forumBoardList.php" class="nav-bar__menu-item">forum</a>
         </div>
         <?php
-            
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+          
+          // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+          include '../checkSignSession.php';
             if (!isset($_SESSION['memberID'])) {
           ?>
         <ul class="nav-bar__message guest-message">
