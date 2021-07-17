@@ -111,7 +111,7 @@
                                 $memberInfo = $result->fetch_array(MYSQLI_ASSOC);
                                 echo "<tr>";
                                 echo "<td class='boardID-col'>".$memberInfo['boardID']."<td>";
-                                echo "<tdclass='title-col'><a href='/forum/php/board/forumView.php?boardID=";
+                                echo "<tdclass='title-col'><a href='./forumView.php?boardID=";
                                 echo "{$memberInfo['boardID']}'>";
                                 echo $memberInfo['title'];
                                 echo "</a></td>";
