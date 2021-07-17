@@ -1,9 +1,8 @@
 <?php
     // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
     // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
-
     include '../session.php';
-    include '../checkSignSession.php';
+    include '../connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +40,10 @@
           <a href="#" class="nav-bar__menu-item">about</a>
           <a href="forumBoardList.php" class="nav-bar__menu-item">forum</a>
         </div>
-        <?php
-            
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+        <?php            
+            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            include '../checkSignSession.php';
+
             if (!isset($_SESSION['memberID'])) {
           ?>
         <ul class="nav-bar__message guest-message">
