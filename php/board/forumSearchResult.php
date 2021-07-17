@@ -40,7 +40,8 @@
         </div>
         <?php
             
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            include '../checkSignSession.php';
             if (!isset($_SESSION['memberID'])) {
           ?>
         <ul class="nav-bar__message guest-message">
@@ -59,7 +60,7 @@
           <li class="nav-bar__message-item">
             환영합니다,
             <?php
-                        echo $_SESSION['userName'];
+                        echo $_SESSION['memberID'];
                     ?>
             님.
 
@@ -96,7 +97,7 @@
                     break;
         }
 
-        $sql = "SELECT b.boardID, b.title, m.userName, b.regTime FROM forumboard b ";
+        $sql = "SELECT b.boardID, b.title, m.memberID, b.regTime FROM forumboard b ";
         $sql .= "JOIN member m ON (b.memberID = m.memberID)";
 
         switch ($searchOption) {

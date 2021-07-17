@@ -39,8 +39,10 @@
           >
         </div>
         <?php
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
+            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            include './php/session.php';
+            include './php/checkSignSession.php';
             if (!isset($_SESSION['memberID'])) {
           ?>
         <ul class="nav-bar__message guest-message">
@@ -59,7 +61,7 @@
           <li class="nnav-bar__message-item">
             환영합니다,
             <?php
-                        echo $_SESSION['userName'];
+                        echo $_SESSION['memberID'];
                     ?>
             님.
 
