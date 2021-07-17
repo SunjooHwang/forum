@@ -3,9 +3,6 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
-    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-
     include '../connection.php';
     include '../session.php';
 
