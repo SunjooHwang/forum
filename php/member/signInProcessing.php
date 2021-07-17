@@ -1,11 +1,13 @@
 <?php
+    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
+    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
     include '../connection.php';
     include '../session.php';
 
     $email = $_POST['userEmail'];
     $pw = $_POST['userPw'];
 
-    $sql = "SELECT memberID, email, userName FROM member ";
+    $sql = "SELECT memberID, email FROM member ";
     $sql .= "WHERE email = '{$email}' AND pw = '{$pw}'";
     $result = $dbConnect->query($sql);
 
@@ -19,8 +21,7 @@
             exit;
         } else {
             $memberInfo = $result->fetch_array(MYSQLI_ASSOC);
-            $_SESSION['memberID'] = $memberInfo['memberID'];
-            $_SESSION['userName'] = $memberInfo['userName'];
+            $_SESSION['memberID'] = $memberInfo['memberID'];            
             Header("Location: ../../index.php");
         }
     } else {
