@@ -1,6 +1,6 @@
 <?php
     if (isset($_SESSION['memberID'])) {
         $memberID = $_SESSION['memberID'];
-        $userName = $_SESSION['userName'];
+        // $userName = $_SESSION['userName'];
     }
 ?>

@@ -1,6 +1,9 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
+    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
+    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
+
+    include '../session.php';
+    include '../checkSignSession.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +62,7 @@
           <li class="nav-bar__message-item">
             환영합니다,
             <?php
-                        echo $_SESSION['userName'];
+                        echo $_SESSION['memberID'];
                     ?>
             님.
 
@@ -94,7 +97,7 @@
 
                     $firstLimitValue = ($numView * $page) - $numView;
 
-                    $sql = "SELECT b.boardID, b.title, m.userName, b.regTime FROM forumboard b ";
+                    $sql = "SELECT b.boardID, b.title, m.memberID, b.regTime FROM forumboard b ";
                     $sql .= "JOIN member m ON (b.memberID = m.memberID) ORDER BY boardID ";
                     $sql .= "DESC LIMIT {$firstLimitValue}, {$numView}";
 
@@ -112,7 +115,7 @@
                                 echo "{$memberInfo['boardID']}'>";
                                 echo $memberInfo['title'];
                                 echo "</a></td>";
-                                echo "<td class='userName-col'>{$memberInfo['userName']}</td>";
+                                echo "<td class='userName-col'>{$memberInfo['memberID']}</td>";
                                 echo "<td class='regTime-col'>".date('Y-m-d H:i', $memberInfo['regTime'])."</td>";
                                 echo "</tr>";
                             }
@@ -124,8 +127,12 @@
             </tbody>
         </table>
         <?php
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardPagination.php';
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardsearchForm.php';
+            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardPagination.php';
+            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardsearchForm.php';
+
+            include './forumBoardPagination.php';
+            include './forumBoardSearchForm.php';
+    
         ?>
       </section>
     </main>

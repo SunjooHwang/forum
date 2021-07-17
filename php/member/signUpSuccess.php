@@ -50,7 +50,7 @@
           <li class="nav-bar__message-item">
             환영합니다,
             <?php
-                        echo $_SESSION['userName'];
+                        echo $_SESSION['memberID'];
                     ?>
             님.
 
