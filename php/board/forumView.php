@@ -2,7 +2,7 @@
     // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
     // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
     include '../session.php';
-    include '../checkSignSession.php';
+    include '../connection.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,9 @@
         </div>
         <?php
             
-            include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            include '../checkSignSession.php';
+
             if (!isset($_SESSION['memberID'])) {
           ?>
         <ul class="nav-bar__message guest-message">
@@ -81,7 +83,7 @@
         
         if (isset($_GET['boardID']) && (int) $_GET['boardID'] > 0) {
             $boardID = $_GET['boardID'];
-            $sql = "SELECT b.title, b.content, m.userName, b.regTime FROM forumboard b ";
+            $sql = "SELECT b.title, b.content, m.memberID, b.regTime FROM forumboard b ";
             $sql .= "JOIN member m ON (b.memberID = m.memberID) ";
             $sql .= "WHERE b.boardID = {$boardID}";
             
