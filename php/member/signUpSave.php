@@ -52,8 +52,8 @@ ini_set("display_errors", 1);
    if ($isEmailCheck == true && $isPwCheck == true) {
        $regTime = time();
        
-       $sql = "INSERT INTO member (firstName, lastName, email, username, pw, regTime)";
-       $sql .= "VALUES ('{$firstName}','{$lastName}','{$email}','{$userName}','{$pw}',{$regTime})";
+       $sql = "INSERT INTO member (firstName, lastName, email, pw, regTime)";
+       $sql .= "VALUES ('{$firstName}','{$lastName}','{$email}','{$pw}',{$regTime})";
        
        $result = $dbConnect->query($sql);
 
