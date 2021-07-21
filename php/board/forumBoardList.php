@@ -1,6 +1,4 @@
 <?php
-    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
     include '../session.php';
     include '../connection.php';
 ?>
@@ -13,7 +11,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../../css/default.css" />
     <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/forumBoardListStyle.css" />
+    <link rel="stylesheet" href="../../css/forumBoardListStyle.css?after" />
         <!-- font awesome -->
         <script
       src="https://kit.fontawesome.com/1165ec50ee.js"
@@ -41,7 +39,7 @@
           <a href="forumBoardList.php" class="nav-bar__menu-item">forum</a>
         </div>
         <?php            
-            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            
             include '../checkSignSession.php';
 
             if (!isset($_SESSION['memberID'])) {
@@ -78,14 +76,22 @@
         <div class="link-to-write">
           <a href="writePostForm.php">글 작성하기</a>
         </div>
-        <table class="forum-board-list">
-            <thead class="forum-board-list__header">
-                <th class="board-list__header-item">No.</th>
-                <th class="board-list__header-item">제목</th>
-                <th class="board-list__header-item">작성자</th>
-                <th class="board-list__header-item">작성일</th>
-            </thead>
-            <tbody class="forum-board-list__posts-section">
+        <div class="forum-board-list">
+            <ul class="forum-board-list__header forum-board__row">
+                <li class="forum-board-list__header-item col__boardId">
+                <span>No.</span>  
+                </li>
+                <li class="forum-board-list__header-item col__title">
+                <span>제목</span>  
+                </li>
+                <li class="forum-board-list__header-item col__author">
+                <span>작성자</span>  
+                </li>
+                <li class="forum-board-list__header-item col__date">
+                <span>작성일</span>  
+                </li>
+            </ul>
+            <ul class="forum-board-list__posts">
                 <?php
                     if (isset($_GET['page'])) {
                         $page = (int) $_GET['page'];
@@ -109,26 +115,26 @@
                         if ($dataCount > 0) {
                             for ($i = 0; $i < $dataCount; $i++) {
                                 $memberInfo = $result->fetch_array(MYSQLI_ASSOC);
-                                echo "<tr>";
-                                echo "<td class='boardID-col'>".$memberInfo['boardID']."<td>";
-                                echo "<tdclass='title-col'><a href='./forumView.php?boardID=";
+                                
+                                echo "<li class='forum-board-list__posts__row forum-board__row>";
+                                echo "<div class='forum-board-list__posts__post col__boardId'>".$memberInfo['boardID']."</div>";
+                                echo "<div class='forum-board-list__posts__post col__title'><a href='./forumView.php?boardID=";
                                 echo "{$memberInfo['boardID']}'>";
                                 echo $memberInfo['title'];
-                                echo "</a></td>";
-                                echo "<td class='userName-col'>{$memberInfo['memberID']}</td>";
-                                echo "<td class='regTime-col'>".date('Y-m-d H:i', $memberInfo['regTime'])."</td>";
-                                echo "</tr>";
+                                echo "</a></div>";
+                                echo "<div class='forum-board-list__posts__post col__author'>{$memberInfo['memberID']}</div>";
+                                echo "<div class='forum-board-list__posts__post col__date'>".date('Y-m-d H:i', $memberInfo['regTime'])."</div>";
+                                echo "</li>";
+                                
                             }
                         } else {
-                            echo "<tr><td>게시글이 없습니다.</td></tr>";
+                            echo "<li>게시글이 없습니다.</li>";
                         }
                     }
                 ?>
-            </tbody>
-        </table>
+            </ul>
+        </div>
         <?php
-            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardPagination.php';
-            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/board/forumBoardsearchForm.php';
 
             include './forumBoardPagination.php';
             include './forumBoardSearchForm.php';

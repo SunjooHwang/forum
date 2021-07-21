@@ -9,7 +9,6 @@ ini_set("display_errors", 1);
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['userEmail'];
-    $userName = $_POST['userName'];
     $pw = $_POST['userPw'];
     $pwChk = $_POST['userPwChk'];
 

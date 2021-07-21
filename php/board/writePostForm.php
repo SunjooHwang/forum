@@ -37,7 +37,6 @@
         </div>
         <?php
           
-          // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
           include '../checkSignSession.php';
             if (!isset($_SESSION['memberID'])) {
           ?>
@@ -74,7 +73,8 @@
       ?>
         <section class="signin-needed-section">
           <h1 class="signin-needed__message">
-            로그인이 필요한 메뉴입니다.
+            로그인이 필요한 메뉴입니다.<br>
+            Please sign in first.
           </h1>
         </section>
       <?php

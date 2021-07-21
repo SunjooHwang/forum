@@ -7,7 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/signUpStyle.css" />
+    <link rel="stylesheet" href="css/signUpStyle.css?after" />
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/1165ec50ee.js"

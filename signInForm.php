@@ -7,7 +7,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/default.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/signInStyle.css" />
+    <link rel="stylesheet" href="css/signInStyle.css?after" />
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/1165ec50ee.js"
@@ -39,8 +39,7 @@
           >
         </div>
         <?php
-            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            
             include './php/session.php';
             include './php/checkSignSession.php';
             if (!isset($_SESSION['memberID'])) {

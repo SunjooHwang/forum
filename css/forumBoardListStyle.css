@@ -13,12 +13,14 @@ html {
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 */
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px) {
   body {
+    background-color: #ffef8f;
+    opacity: 1;
+    background-image: linear-gradient(#f8f8ff 1px, transparent 1px), linear-gradient(to right, #f8f8ff 1px, #ffef8f 1px);
+    background-size: 20px 20px;
     width: 100%;
-    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
     background-position: center;
-    background-size: cover;
   }
   .forum-board-section {
     width: 100%;
@@ -69,6 +71,19 @@ html {
   .forum-board-section .forum-board-list {
     width: 90%;
     height: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
     border: 1px solid #d9d9d9;
   }
@@ -80,7 +95,6 @@ html {
             backdrop-filter: blur(5px);
   }
   .forum-board-section .forum-board-list__posts-section {
-    border: 1px solid blue;
     width: 100%;
     height: 90%;
   }
@@ -130,12 +144,14 @@ html {
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   body {
+    background-color: #ffef8f;
+    opacity: 1;
+    background-image: linear-gradient(#f8f8ff 1px, transparent 1px), linear-gradient(to right, #f8f8ff 1px, #ffef8f 1px);
+    background-size: 20px 20px;
     width: 100%;
-    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
     background-position: center;
-    background-size: cover;
   }
   .forum-board-section {
     width: 90%;
@@ -187,6 +203,19 @@ html {
     width: 100%;
     min-width: 70rem;
     height: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
     border: 1px solid #d9d9d9;
   }
@@ -198,7 +227,6 @@ html {
             backdrop-filter: blur(5px);
   }
   .forum-board-section .forum-board-list__posts-section {
-    border: 1px solid blue;
     width: 100%;
     height: 90%;
   }
@@ -248,12 +276,14 @@ html {
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   body {
+    background-color: #ffef8f;
+    opacity: 1;
+    background-image: linear-gradient(#f8f8ff 1px, transparent 1px), linear-gradient(to right, #f8f8ff 1px, #ffef8f 1px);
+    background-size: 20px 20px;
     width: 100%;
-    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
     background-position: center;
-    background-size: cover;
   }
   .forum-board-section {
     width: 80%;
@@ -305,6 +335,19 @@ html {
     width: 100%;
     min-width: 92rem;
     height: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
     border: 1px solid #d9d9d9;
   }
@@ -316,7 +359,6 @@ html {
             backdrop-filter: blur(5px);
   }
   .forum-board-section .forum-board-list__posts-section {
-    border: 1px solid blue;
     width: 100%;
     height: 90%;
   }
@@ -368,31 +410,20 @@ html {
 */
 @media (min-width: 1200px) {
   body {
+    background-color: #ffef8f;
+    opacity: 1;
+    background-image: linear-gradient(#f8f8ff 1px, transparent 1px), linear-gradient(to right, #f8f8ff 1px, #ffef8f 1px);
+    background-size: 20px 20px;
     width: 100%;
-    background-image: url(../img/pexels-matheus-natan-3297593.jpg);
     background-position: center;
-    background-size: cover;
   }
   .forum-board-section {
-    width: 80%;
+    width: 80vw;
     height: 80vh;
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .forum-board-section .link-to-write {
-    width: 75%;
+    width: 100px;
     font-size: 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -420,33 +451,87 @@ html {
     transition: 0.2s ease-in-out;
   }
   .forum-board-section .forum-board-list {
-    width: 80%;
-    min-width: 110rem;
+    width: 100%;
     height: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.5rem;
     border: 1px solid #d9d9d9;
   }
-  .forum-board-section .forum-board-list__header {
+  .forum-board-section .forum-board-list__header-item {
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    color: #6c6f73;
+  }
+  .forum-board-section .forum-board-list .forum-board__row {
     width: 100%;
-    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .forum-board-section .forum-board-list .forum-board__row .col__boardId {
+    width: 10%;
+    margin-right: 2px;
+  }
+  .forum-board-section .forum-board-list .forum-board__row .col__title {
+    width: 60%;
+    margin-right: 2px;
+  }
+  .forum-board-section .forum-board-list .forum-board__row .col__author {
+    width: 15%;
+    margin-right: 2px;
+  }
+  .forum-board-section .forum-board-list .forum-board__row .col__date {
+    width: 15%;
+  }
+  .forum-board-section .forum-board-list__posts {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .forum-board-section .forum-board-list__posts__row {
+    height: 40px;
+    width: 100%;
+  }
+  .forum-board-section .forum-board-list__posts__row__post {
     background-color: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
   }
-  .forum-board-section .forum-board-list__posts-section {
-    border: 1px solid blue;
-    width: 100%;
-    height: 90%;
-  }
-  .forum-board-section .forum-board-list__posts-section tr td {
-    background-color: rgba(255, 255, 255, 0.4);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-  }
-  .forum-board-section .forum-board-list__posts-section tr td a {
+  .forum-board-section .forum-board-list__posts__row__post a {
     color: #020a96;
   }
-  .forum-board-section .forum-board-list__posts-section tr td a:hover {
+  .forum-board-section .forum-board-list__posts__row__post a:hover {
     color: #f2cd5c;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
@@ -474,4 +559,3 @@ html {
     padding: 0 1rem;
   }
 }
-/*# sourceMappingURL=forumBoardListStyle.css.map */

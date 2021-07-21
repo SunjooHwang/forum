@@ -35,8 +35,7 @@
           <a href="./php/board/forumBoardList.php" class="nav-bar__menu-item">forum</a>
         </div>
         <?php
-            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-            // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/checkSignSession.php';
+            
             include './php/session.php';
             include './php/checkSignSession.php';
 
@@ -58,7 +57,7 @@
           <li class="nnav-bar__message-item">
             환영합니다,
             <?php
-                        echo $_SESSION['memberID'];
+                        echo $_SESSION['firstName'];
                     ?>
             님.
 
