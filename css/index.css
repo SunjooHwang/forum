@@ -963,6 +963,9 @@ html {
   .nav-bar__message-item a {
     color: #f8f8ff;
   }
+  .nav-bar__message-item a:visited {
+    color: #f8f8ff;
+  }
   .nav-bar .guest-message {
     display: -webkit-box;
     display: -ms-flexbox;

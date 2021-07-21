@@ -73,9 +73,9 @@
     </header>
     <main>
       <section class="forum-board-section">
-        <div class="link-to-write">
-          <a href="writePostForm.php">글 작성하기</a>
-        </div>
+          <a href="writePostForm.php" class="write-btn">
+            <button class="write-btn__btn">글 작성하기</button>
+          </a>
         <div class="forum-board-list">
             <ul class="forum-board-list__header forum-board__row">
                 <li class="forum-board-list__header-item col__boardId">
@@ -117,13 +117,13 @@
                                 $memberInfo = $result->fetch_array(MYSQLI_ASSOC);
                                 
                                 echo "<li class='forum-board-list__posts__row forum-board__row'>";
-                                echo "<div class='forum-board-list__posts__post col__boardId'>".$memberInfo['boardID']."</div>";
-                                echo "<div class='forum-board-list__posts__post col__title'><a href='./forumView.php?boardID=";
+                                echo "<div class='forum-board-list__posts__row__post col__boardId'><span>".$memberInfo['boardID']."</span></div>";
+                                echo "<div class='forum-board-list__posts__row__post col__title'><span><a href='./forumView.php?boardID=";
                                 echo "{$memberInfo['boardID']}'>";
                                 echo $memberInfo['title'];
-                                echo "</a></div>";
-                                echo "<div class='forum-board-list__posts__post col__author'>{$memberInfo['memberID']}</div>";
-                                echo "<div class='forum-board-list__posts__post col__date'>".date('Y-m-d H:i', $memberInfo['regTime'])."</div>";
+                                echo "</a></span></div>";
+                                echo "<div class='forum-board-list__posts__row__post col__author'><span>{$memberInfo['memberID']}</span></div>";
+                                echo "<div class='forum-board-list__posts__row__post col__date'><span>".date('Y-m-d H:i', $memberInfo['regTime'])."</span></div>";
                                 echo "</li>";
                                 
                             }

@@ -28,26 +28,29 @@
     align-items: center;
     justify-content: center;
 
-    .link-to-write {
-      width: 75%;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .write-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin-bottom: 1rem;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
 
@@ -78,6 +81,7 @@
         td {
           @include frostedGlass();
           a {
+            transition: 0.2s ease-in-out;
             color: $blue;
             &:hover {
               color: $prmry3;
@@ -100,6 +104,7 @@
 
       li {
         a {
+          transition: 0.2s ease-in-out;
           color: $scndry3;
           &:hover {
             color: $prmry3;
@@ -145,29 +150,31 @@
     align-items: center;
     justify-content: center;
 
-    .link-to-write {
-      width: 75%;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .write-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin-bottom: 1rem;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
-
     .forum-board-list {
       width: 100%;
       min-width: 70rem;
@@ -196,6 +203,7 @@
         td {
           @include frostedGlass();
           a {
+            transition: 0.2s ease-in-out;
             color: $blue;
             &:hover {
               color: $prmry3;
@@ -218,6 +226,7 @@
 
       li {
         a {
+          transition: 0.2s ease-in-out;
           color: $scndry3;
           &:hover {
             color: $prmry3;
@@ -263,26 +272,29 @@
     align-items: center;
     justify-content: center;
 
-    .link-to-write {
-      width: 75%;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .write-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin-bottom: 1rem;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
 
@@ -314,6 +326,7 @@
         td {
           @include frostedGlass();
           a {
+            transition: 0.2s ease-in-out;
             color: $blue;
             &:hover {
               color: $prmry3;
@@ -336,6 +349,7 @@
 
       li {
         a {
+          transition: 0.2s ease-in-out;
           color: $scndry3;
           &:hover {
             color: $prmry3;
@@ -376,31 +390,33 @@
     height: 80vh;
     margin: 0 auto;
 
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .link-to-write {
-      width: 100px;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .write-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin-bottom: 1rem;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
 
@@ -463,10 +479,17 @@
           height: 40px;
           width: 100%;
           &__post {
-            @include frostedGlass();
+            background: $offwhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             a {
               color: $blue;
+              &:visited {
+                color: $blue;
+                transition: 0.2s ease-in-out;
+              }
               &:hover {
                 color: $prmry3;
                 transition: 0.2s ease-in-out;
@@ -489,6 +512,7 @@
 
       li {
         a {
+          transition: 0.2s ease-in-out;
           color: $scndry3;
           &:hover {
             color: $prmry3;
