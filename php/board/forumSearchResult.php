@@ -18,7 +18,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../../css/default.css" />
     <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/forumSearchResultStyle.css" />
+    <link rel="stylesheet" href="../../css/forumBoardListStyle.css?after"/>
   </head>
   <body>
     <header>
@@ -129,34 +129,44 @@
             exit;
         }
     ?>
-      <section class="search-result">
-        <table class="search-result__table">
-        <thead class="search-result__table__header">
-                <th class="search-result__table__header-item">No.</th>
-                <th class="search-result__table__header-item">제목</th>
-                <th class="search-result__table__header-item">작성자</th>
-                <th class="search-result__table__header-item">작성일</th>
-            </thead>
-            <tbody class="search-result__table__posts-section">
+      <section class="forum-board-section">
+        <div class="forum-board-list">
+              <ul class="forum-board-list__header forum-board__row">
+                  <li class="forum-board-list__header-item col__boardId">
+                  <span>No.</span>  
+                  </li>
+                  <li class="forum-board-list__header-item col__title">
+                  <span>제목</span>  
+                  </li>
+                  <li class="forum-board-list__header-item col__author">
+                  <span>작성자</span>  
+                  </li>
+                  <li class="forum-board-list__header-item col__date">
+                  <span>작성일</span>  
+                  </li>
+              </ul>
+              <ul class="forum-board-list__posts">
                 <?php
                     if ($dataCount > 0) {
                         for ($i = 0; $i < $dataCount; $i ++) {
                             $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
 
-                            echo "<tr>";
-                            echo "<td>".$memberInfo['boardID']."</td>";
-                            echo "<td class='col_title'><a href='./185-view.php?boardID={$memberInfo['boardID']}'>";
-                            echo "{$memberInfo['title']}</a></td>";
-                            echo "<td>".$memberInfo['userName']."</td>";
-                            echo "<td>".date('Y-m-d H:1', $memberInfo['regTime'])."</td>";
-                            echo "</tr>";
+                            echo "<li class='forum-board-list__posts__row forum-board__row'>";
+                            echo "<div class='forum-board-list__posts__row__post col__boardId'><span>".$memberInfo['boardID']."</span></div>";
+                            echo "<div class='forum-board-list__posts__row__post col__title'><span><a href='./forumView.php?boardID=";
+                            echo "{$memberInfo['boardID']}'>";
+                            echo $memberInfo['title'];
+                            echo "</a></span></div>";
+                            echo "<div class='forum-board-list__posts__row__post col__author'><span>{$memberInfo['memberID']}</span></div>";
+                            echo "<div class='forum-board-list__posts__row__post col__date'><span>".date('Y-m-d H:i', $memberInfo['regTime'])."</span></div>";
+                            echo "</li>";
                         }
                     } else {
-                        echo "<tr><td>{$searchKeyword}를 포함하는 게시글이 없습니다. </td></tr>";
+                        echo "<div class='search-error-message><h1 class='search-error-message__text'>{$searchKeyword}를 포함하는 게시글이 없습니다. </h1></div>";
                     }
                 ?>
-            </tbody>
-        </table>
+            </ul>
+          </div>
       </section>
     </main>
     <footer>

@@ -47,6 +47,8 @@
     }
 
     .forum-board-list {
+      @include frostedGlass;
+
       width: 90%;
       height: 60%;
 
@@ -82,6 +84,17 @@
             }
           }
         }
+      }
+    }
+    .search-error-message {
+      &__text {
+        font-size: 20px;
+        @include roboto;
+        color: $scndry3;
+        position: relative;
+        top: 100px;
+        text-align: center;
+        line-height: 30px;
       }
     }
 
@@ -160,6 +173,8 @@
       }
     }
     .forum-board-list {
+      @include frostedGlass;
+
       width: 100%;
       min-width: 70rem;
       height: 60%;
@@ -198,31 +213,41 @@
         }
       }
     }
+    display: flex;
+    .search-error__message {
+      font-size: 20px;
+      @include roboto;
+      color: $scndry3;
+      position: relative;
+      top: 100px;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
 
-    .forum-board__pagination {
-      width: 20%;
-      display: flex;
-      justify-content: space-around;
+  .forum-board__pagination {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
 
-      margin-top: 1.5rem;
+    margin-top: 1.5rem;
 
-      font-size: 1.5rem;
+    font-size: 1.5rem;
 
-      li {
-        a {
+    li {
+      a {
+        transition: 0.2s ease-in-out;
+        color: $scndry3;
+        &:hover {
+          color: $prmry3;
           transition: 0.2s ease-in-out;
-          color: $scndry3;
-          &:hover {
-            color: $prmry3;
-            transition: 0.2s ease-in-out;
-          }
         }
       }
+    }
 
-      &__no {
-        a {
-          padding: 0 1rem;
-        }
+    &__no {
+      a {
+        padding: 0 1rem;
       }
     }
   }
@@ -275,6 +300,8 @@
     }
 
     .forum-board-list {
+      @include frostedGlass;
+
       width: 100%;
       min-width: 92rem;
       height: 60%;
@@ -313,31 +340,41 @@
         }
       }
     }
+    align-items: center;
+    .search-error__message {
+      font-size: 20px;
+      @include roboto;
+      color: $scndry3;
+      position: relative;
+      top: 100px;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
 
-    .forum-board__pagination {
-      width: 20%;
-      display: flex;
-      justify-content: space-around;
+  .forum-board__pagination {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
 
-      margin-top: 1.5rem;
+    margin-top: 1.5rem;
 
-      font-size: 1.5rem;
+    font-size: 1.5rem;
 
-      li {
-        a {
+    li {
+      a {
+        transition: 0.2s ease-in-out;
+        color: $scndry3;
+        &:hover {
+          color: $prmry3;
           transition: 0.2s ease-in-out;
-          color: $scndry3;
-          &:hover {
-            color: $prmry3;
-            transition: 0.2s ease-in-out;
-          }
         }
       }
+    }
 
-      &__no {
-        a {
-          padding: 0 1rem;
-        }
+    &__no {
+      a {
+        padding: 0 1rem;
       }
     }
   }
@@ -398,6 +435,8 @@
       align-items: center;
 
       font-size: 1.5rem;
+
+      @include frostedGlass();
 
       border: 1px solid $scndry1;
 
@@ -468,31 +507,41 @@
         }
       }
     }
+    justify-content: center;
+    .search-error__message {
+      font-size: 20px;
+      @include roboto;
+      color: $scndry3;
+      position: relative;
+      top: 100px;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
 
-    .forum-board__pagination {
-      width: 20%;
-      display: flex;
-      justify-content: space-around;
+  .forum-board__pagination {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
 
-      margin-top: 1.5rem;
+    margin-top: 1.5rem;
 
-      font-size: 1.5rem;
+    font-size: 1.5rem;
 
-      li {
-        a {
+    li {
+      a {
+        transition: 0.2s ease-in-out;
+        color: $scndry3;
+        &:hover {
+          color: $prmry3;
           transition: 0.2s ease-in-out;
-          color: $scndry3;
-          &:hover {
-            color: $prmry3;
-            transition: 0.2s ease-in-out;
-          }
         }
       }
+    }
 
-      &__no {
-        a {
-          padding: 0 1rem;
-        }
+    &__no {
+      a {
+        padding: 0 1rem;
       }
     }
   }
