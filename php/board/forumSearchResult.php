@@ -1,8 +1,8 @@
 <?php
   ini_set('display_errors', '1');
 
-    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-    include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
+  include '../session.php';
+  include '../checkSignSession.php';
 
     $searchKeyword = $dbConnect->real_escape_string($_POST['footer__search-text']);
     $searchOption = $dbConnect->real_escape_string($_POST['searchOption']);
