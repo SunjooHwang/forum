@@ -116,7 +116,7 @@
                             for ($i = 0; $i < $dataCount; $i++) {
                                 $memberInfo = $result->fetch_array(MYSQLI_ASSOC);
                                 
-                                echo "<li class='forum-board-list__posts__row forum-board__row>";
+                                echo "<li class='forum-board-list__posts__row forum-board__row'>";
                                 echo "<div class='forum-board-list__posts__post col__boardId'>".$memberInfo['boardID']."</div>";
                                 echo "<div class='forum-board-list__posts__post col__title'><a href='./forumView.php?boardID=";
                                 echo "{$memberInfo['boardID']}'>";
