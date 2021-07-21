@@ -1,6 +1,5 @@
 <?php
-    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/session.php';
-    // include $_SERVER['DOCUMENT_ROOT'].'/forum/php/connection.php';
+
     include '../session.php';
     include '../connection.php';
 ?>

@@ -73,10 +73,7 @@
         <div class="page_title">
           <h1>FORUM</h1>
           <h3>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
-            esse pariatur iusto, fuga magni, laboriosam recusandae architecto
-            quam culpa beatae totam enim aperiam facere. Quisquam, at?
-            Perferendis, eum voluptatibus! Assumenda?
+                      Welcome to forum! 
           </h3>
         </div>
         <div class="index__top__left-slider">
