@@ -17,26 +17,29 @@
     flex-direction: column;
     align-items: center;
 
-    .link-to-list {
-      width: 75%;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .list-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin: 1rem 0;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
 
@@ -73,13 +76,13 @@
           }
         }
 
-        &-title {
+        &__title {
           width: 40%;
         }
-        &-author {
+        &__author {
           width: 20%;
         }
-        &-date {
+        &__date {
           width: 20%;
         }
       }
@@ -104,7 +107,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     width: 100%;
-    // background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+
     background-position: center;
     background-size: cover;
   }
@@ -118,26 +121,29 @@
     flex-direction: column;
     align-items: center;
 
-    .link-to-list {
-      width: 75%;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .list-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin: 1rem 0;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
 
@@ -174,13 +180,13 @@
           }
         }
 
-        &-title {
+        &__title {
           width: 40%;
         }
-        &-author {
+        &__author {
           width: 20%;
         }
-        &-date {
+        &__date {
           width: 20%;
         }
       }
@@ -206,7 +212,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   body {
     width: 100%;
-    // background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+
     background-position: center;
     background-size: cover;
   }
@@ -220,26 +226,29 @@
     flex-direction: column;
     align-items: center;
 
-    .link-to-list {
-      width: 75%;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .list-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin: 1rem 0;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
 
@@ -276,13 +285,13 @@
           }
         }
 
-        &-title {
+        &__title {
           width: 40%;
         }
-        &-author {
+        &__author {
           width: 20%;
         }
-        &-date {
+        &__date {
           width: 20%;
         }
       }
@@ -308,7 +317,7 @@
 @media (min-width: 1200px) {
   body {
     width: 100%;
-    // background-image: url(../img/pexels-matheus-natan-3297593.jpg);
+
     background-position: center;
     background-size: cover;
   }
@@ -322,26 +331,29 @@
     flex-direction: column;
     align-items: center;
 
-    .link-to-list {
-      width: 75%;
-      font-size: 1.5rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+    .list-btn {
+      @include frostedGlass();
+      border: 1px solid $offwhite;
+      width: 120px;
+      font-size: 20px;
+      padding: 1rem;
+      margin: 2rem 0;
+      align-self: flex-end;
 
-      margin: 1rem 0;
+      text-align: center;
 
-      a {
-        @include frostedGlass();
+      box-sizing: content-box;
 
-        padding: 1rem;
-        border: 1px solid $offwhite;
+      &:hover {
+        border: 1px solid $prmry3;
+        color: $prmry3;
+        transition: 0.2s ease-in-out;
+      }
+      &__btn {
+        background: transparent;
+        border: none;
         color: $scndry3;
-        &:hover {
-          border: 1px solid $prmry3;
-          color: $prmry3;
-          transition: 0.2s ease-in-out;
-        }
+        transition: 0.2s ease-in-out;
       }
     }
 
@@ -378,13 +390,13 @@
           }
         }
 
-        &-title {
+        &__title {
           width: 40%;
         }
-        &-author {
+        &__author {
           width: 20%;
         }
-        &-date {
+        &__date {
           width: 20%;
         }
       }

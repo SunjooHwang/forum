@@ -27,7 +27,6 @@
         <div class="nav-bar__ham-btn-mb">
           <i class="fas fa-bars" id="hamBtn"></i>
         </div>
-
         <div class="nav-bar__menu-wrap-mb">
           <div class="nav-bar__close-btn-mb">
             <i class="fas fa-times" id="closeBtn"></i>

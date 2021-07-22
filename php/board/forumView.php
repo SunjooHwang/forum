@@ -75,9 +75,9 @@
     </header>
     <main>
         <section class="forum-view">
-        <div class="link-to-list">
-          <a href="forumBoardList.php">목록으로</a>
-        </div>
+        <a class="list-btn">
+          <button class="list-btn__btn" href="forumBoardList.php">목록으로</button>
+        </a>
       <?php
         
         if (isset($_GET['boardID']) && (int) $_GET['boardID'] > 0) {
@@ -90,17 +90,17 @@
 
             if ($result) {
                 $contentInfo = $result -> fetch_array(MYSQLI_ASSOC);
-                echo "<article class='forum-view__article'><ul class='forum-view__article__info'>";
-                echo "<ul class='forum-view__article__info-title'>";
-                echo "<li>제목</li><li>".$contentInfo['title']."</li></ul>";
-                echo "<ul class='forum-view__article__info-author'>";
-                echo "<li>작성자 </li><li>".$contentInfo['userName']."</li></ul>";
+                echo "<main class='forum-view__article'><div class='forum-view__article__info'>";
+                echo "<ul class='forum-view__article__info__title'>";
+                echo "<li class='forum-view__article__info__title__type'><span>제목</span></li><li class='forum-view__article__info__title__value'><span?>".$contentInfo['title']."</span></li></ul>";
+                echo "<ul class='forum-view__article__info__author'>";
+                echo "<li class='forum-view__article__info__author__type'><span>작성자</span> </li><li class='forum-view__article__info__author__value'><span?>".$contentInfo['userName']."</span></li></ul>";
                 
                 $regDate = date("Y-m-d h:i");
-                echo "<ul class='forum-view__article__info-date'>";
-                echo "<li>게시일</li><li>".$regDate."</li></ul></ul>";
-                echo "<div class='forum-view__article__content'>".$contentInfo['content']."</div>";
-                echo "</article>";
+                echo "<ul class='forum-view__article__info__date'>";
+                echo "<li class='forum-view__article__info__date__type'><span>게시일</span></li><li class='forum-view__article__info__date__value'><span?>".$regDate."</span></li></ul></div>";
+                echo "<article class='forum-view__article__content'>".$contentInfo['content']."</article>";
+                echo "</main>";
 
             } else {
                 echo "잘못된 접근입니다.";
