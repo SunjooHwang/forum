@@ -1,4 +1,4 @@
-# forum
+# Forum
 <span>
 <img src="https://img.shields.io/badge/PHP-blue?style=flat-square&logo=PHP&logoColor=white" alt="PHP"/>
 <img src="https://img.shields.io/badge/MySQL-orange?style=flat-square&logo=MySQL&logoColor=white" alt="MySQL"/>
